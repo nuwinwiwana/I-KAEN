@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setupUIView();
 
-        Login.setOnClickListener(new View.OnClickListener() {
+            Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (validate()) {
@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
                 ForgotPassword.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
-                        
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this,ForgotPasswordActivity.class);
+                        startActivity(intent);
+
                     }
                 });
         }
