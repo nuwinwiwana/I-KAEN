@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "390902880080",
+    "project_id": "i-kaen-system",
+    "storage_bucket": "i-kaen-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390902880080:android:2d39cf89a55669c2887e55",
+        "android_client_info": {
+          "package_name": "com.example.i_kaensystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390902880080-570id71tj867lk0p21nnhufl289vs582.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxu-RJU8sXdkpHOuwevnEe4b4JV816_EA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390902880080-570id71tj867lk0p21nnhufl289vs582.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
