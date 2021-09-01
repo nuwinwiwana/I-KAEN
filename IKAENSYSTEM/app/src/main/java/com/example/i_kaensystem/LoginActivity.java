@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText Name,Email,Password;
-    private Button Login;
+    private EditText userName,userEmail,userPassword;
+    private Button buttonLogin;
     private TextView ForgotPassword,SignUp;
 
 
@@ -26,9 +26,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,DashboardActivity.class);
+                startActivity(intent);
                 if (validate()) {
 
                 }
@@ -42,7 +44,19 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
      });
+
+        SignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,SignupActivity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
     }
 
 
@@ -51,23 +65,23 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void setupUIView(){
-        Name =  (EditText)findViewById(R.id.editTextUsername);
-        Email = (EditText)findViewById(R.id.editTextEmail);
-        Password = (EditText)findViewById(R.id.editTextPassword);
-        Login = (Button)findViewById(R.id.LoginButton);
+        userName = (EditText)findViewById(R.id.editTextUsername);
+        userEmail = (EditText)findViewById(R.id.editTextEmail);
+        userPassword = (EditText)findViewById(R.id.editTextPassword);
+        buttonLogin = (Button)findViewById(R.id.LoginButton);
         ForgotPassword = (TextView)findViewById(R.id.tvForgotPassword);
-        SignUp =  (TextView)findViewById(R.id.tvSignUp);
+        SignUp = (TextView)findViewById(R.id.tvSignUp);
 
 
     }
     private Boolean validate() {
         Boolean result = false;
 
-        String name = Name.getText().toString();
-        String email = Email.getText().toString();
-        String password = Password.getText().toString();
+        String name = userName.getText().toString();
+        String email = userEmail.getText().toString();
+        String password = userEmail.getText().toString();
 
-        if (name.isEmpty() && password.isEmpty() && email.isEmpty()) {
+        if (name.isEmpty() || password.isEmpty() || email.isEmpty()) {
             Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show();
 
         }else{
