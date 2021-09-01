@@ -10,17 +10,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class LoginActivity extends AppCompatActivity {
 
     private EditText Name,Email,Password;
     private Button Login;
     private TextView ForgotPassword,SignUp;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
         setupUIView();
+
+
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override

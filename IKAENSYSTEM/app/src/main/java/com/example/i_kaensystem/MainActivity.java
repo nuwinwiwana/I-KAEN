@@ -16,5 +16,7 @@ public class MainActivity extends LoginActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(MainActivity.this, "dah ada firebase", Toast.LENGTH_SHORT).show();
     }
 }
