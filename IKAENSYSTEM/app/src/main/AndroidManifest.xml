@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IKAENSYSTEM">
+<<<<<<< HEAD
         <activity android:name=".SignUpActivity"></activity>
+=======
+        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".EditProfileActivity" />
+>>>>>>> f486e41336cc6faa1db3f3e2c9c4d17c12aeaf4e
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity">
