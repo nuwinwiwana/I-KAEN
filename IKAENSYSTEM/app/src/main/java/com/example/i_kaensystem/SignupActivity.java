@@ -1,22 +1,30 @@
 package com.example.i_kaensystem;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignupActivity extends AppCompatActivity {
 
-    EditText etName, etUsername, etEmail, etPassword, etConfirmPassword;
+     private FirebaseAuth firebaseAuth;
+     private EditText etName, etUsername, etEmail, etPassword, etConfirmPassword;
+     private Button btregister;
     final int MIN_PASSWORD_LENGTH = 6;
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
+
+        firebaseAuth = firebaseAuth.getInstance();
 
         viewInitializations();
     }
@@ -27,6 +35,8 @@ public class SignupActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         etConfirmPassword = findViewById(R.id.et_confirm_password);
+        btregister = findViewById(R.id.bt_register);
+
 
         // To show back button in actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -92,7 +102,7 @@ public class SignupActivity extends AppCompatActivity {
             String password = etPassword.getText().toString();
             String repeatPassword = etConfirmPassword.getText().toString();
 
-            Toast.makeText(this,"Login Success",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Sign Up Success",Toast.LENGTH_SHORT).show();
             // Here you can call you API
 
         }
