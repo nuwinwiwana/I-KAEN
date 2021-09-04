@@ -1,5 +1,6 @@
 package com.example.i_kaensystem;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -7,15 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SignupActivity extends AppCompatActivity {
 
      private FirebaseAuth firebaseAuth;
      private EditText etName, etUsername, etEmail, etPassword, etConfirmPassword;
-     private Button btregister;
+     private Button btRegister;
     final int MIN_PASSWORD_LENGTH = 6;
 
     @Override
@@ -23,27 +29,69 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
+        viewInitializations();
 
         firebaseAuth = firebaseAuth.getInstance();
 
-        viewInitializations();
+        btRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(validate()){
+                    String et_Email= etEmail.getText().toString().trim();
+                    String et_Password = etPassword.getText().toString().trim();
+
+                    firebaseAuth.createUserWithEmailAndPassword(et_Email, et_Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()) {
+                                Toast.makeText(SignupActivity.this, "Sign Up successful", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(SignupActivity.this, LoginActivity.class));
+                            }else{
+                                Toast.makeText(SignupActivity.this, "Sign Up unsuccessful", Toast.LENGTH_SHORT).show();
+                            }
+
+
+                        }
+                    });
+
+            }
+        }
+        });
+
     }
 
-    void viewInitializations() {
+    private boolean validate() {
+        boolean result = false;
+
+        String name = etName.getText().toString();
+        String Password = etPassword.getText().toString();
+        String email = etEmail.getText().toString();
+
+        if (name.isEmpty() && Password.isEmpty() && email.isEmpty()){
+            Toast.makeText(this, "Enter all details", Toast.LENGTH_SHORT).show();
+        }else{
+            result = true;
+        }
+        return result;
+    }
+
+    private void viewInitializations() {
         etName = findViewById(R.id.et_name);
         etUsername = findViewById(R.id.et_username);
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         etConfirmPassword = findViewById(R.id.et_confirm_password);
-        btregister = findViewById(R.id.bt_register);
+        btRegister = findViewById(R.id.bt_register);
+
 
 
         // To show back button in actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+
     // Checking if the input in form is valid
-    boolean validateInput() {
+    private boolean validateInput() {
         if (etName.getText().toString().equals("")) {
             etName.setError("Please Enter First Name");
             return false;
@@ -101,7 +149,6 @@ public class SignupActivity extends AppCompatActivity {
             String email = etEmail.getText().toString();
             String password = etPassword.getText().toString();
             String repeatPassword = etConfirmPassword.getText().toString();
-
             Toast.makeText(this,"Sign Up Success",Toast.LENGTH_SHORT).show();
             // Here you can call you API
 
