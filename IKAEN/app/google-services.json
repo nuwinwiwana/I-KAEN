@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "785257826926",
+    "firebase_url": "https://ikaen-a3973-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ikaen-a3973",
+    "storage_bucket": "ikaen-a3973.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785257826926:android:1f4e39323d386930d8b47f",
+        "android_client_info": {
+          "package_name": "com.example.ikaen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785257826926-ppv28gp7mv746liq9er29op4bjkp9r3h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ikaen",
+            "certificate_hash": "f6cc6cf1458ed5efaebb387f32a8729d5b73cab6"
+          }
+        },
+        {
+          "client_id": "785257826926-hquvk67ebum4rlpmftgd95fqj2lrvcoi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr_x6UGRyHxc5V1IXoqUBxa69LjXrgI3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785257826926-hquvk67ebum4rlpmftgd95fqj2lrvcoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
