@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +35,7 @@ public class register extends AppCompatActivity {
 
         final Button registerBtn = findViewById(R.id.registerBtn);
         final TextView loginNowBtn = findViewById(R.id.loginNow);
+
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +62,7 @@ public class register extends AppCompatActivity {
                                 Toast.makeText(register.this, "Phone is already registered", Toast.LENGTH_SHORT).show();
                             }
                             else{
+
                                 databaseReference.child("users").child(phoneTxt).child("fullname").setValue(fullnameTxt);
                                 databaseReference.child("users").child(phoneTxt).child("email").setValue(emailTxt);
                                 databaseReference.child("users").child(phoneTxt).child("password").setValue(passwordTxt);
