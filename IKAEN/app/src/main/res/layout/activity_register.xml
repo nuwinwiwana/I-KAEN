@@ -111,6 +111,7 @@
             android:layout_height="wrap_content"
             android:text="Already have an account?"/>.
 
+
         <TextView
             android:id="@+id/loginNow"
             android:layout_width="wrap_content"

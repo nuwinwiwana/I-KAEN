@@ -35,8 +35,9 @@ public class login extends AppCompatActivity {
 
         final EditText email = findViewById(R.id.email);
         final EditText password = findViewById(R.id.password);
-        final Button loginBtn = findViewById(R.id.loginBtn);
+        final Button loginBtn = findViewById(R.id.LoginBtn);
         final TextView registerNowBtn = findViewById(R.id.registerNowBtn);
+        final TextView ForgotPassword = findViewById(R.id.FgtPasswordBtn );
 
      loginBtn.setOnClickListener(new View.OnClickListener() {
          @Override
@@ -63,6 +64,17 @@ public class login extends AppCompatActivity {
              startActivity(new Intent(login.this,register.class));
          }
      });
+
+        ForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //open Forgot password activity
+
+                startActivity(new Intent(login.this,ForgotPassword.class));
+            }
+        });
+
     }
 
     private void login (String email, String password){
