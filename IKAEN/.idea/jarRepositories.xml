@@ -26,5 +26,10 @@
       <option name="name" value="maven" />
       <option name="url" value="file:/$PROJECT_DIR$/../../MASTER%20I-KAEN/IKAEN/%3Cyour-SDK-path%3E/extras/android/m2repository" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/%3Cyour-SDK-path%3E/extras/android/m2repository" />
+    </remote-repository>
   </component>
 </project>
