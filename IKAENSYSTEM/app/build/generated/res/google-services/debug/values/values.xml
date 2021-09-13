@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">390902880080-570id71tj867lk0p21nnhufl289vs582.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">390902880080</string>
+    <string name="google_api_key" translatable="false">AIzaSyDxu-RJU8sXdkpHOuwevnEe4b4JV816_EA</string>
+    <string name="google_app_id" translatable="false">1:390902880080:android:2d39cf89a55669c2887e55</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDxu-RJU8sXdkpHOuwevnEe4b4JV816_EA</string>
+    <string name="google_storage_bucket" translatable="false">i-kaen-system.appspot.com</string>
+    <string name="project_id" translatable="false">i-kaen-system</string>
+</resources>

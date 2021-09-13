@@ -45,4 +45,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:16.0.2'
     implementation 'com.google.android.gms:play-services-gcm:15.0.1'
     implementation 'com.android.support:support-annotations:22.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'androidx.test.ext:junit:1.1.2'
+    implementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+
 }
