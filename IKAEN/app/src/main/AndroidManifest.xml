@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IKAEN">
+        <activity android:name=".weatherInfo"></activity>
+        <activity android:name=".activityHistory" />
+        <activity android:name=".camera" />
+        <activity android:name=".timer" />
         <activity android:name=".setting" />
         <activity android:name=".ProfilePage" />
         <activity android:name=".ForgotPassword" />

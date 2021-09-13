@@ -91,7 +91,7 @@ public class login extends AppCompatActivity {
                             if(!user.isEmailVerified()){
                                 startActivity(new Intent(login.this,verify.class));
                             }else{
-                                startActivity(new Intent(login.this,ProfilePage.class));
+                                startActivity(new Intent(login.this,MainActivity.class));
                             }
                             //updateUI(user);
                         } else {
