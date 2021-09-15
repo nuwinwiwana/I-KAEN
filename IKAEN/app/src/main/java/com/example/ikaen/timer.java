@@ -46,9 +46,7 @@ public class timer extends AppCompatActivity {
         mButtonSet = findViewById(R.id.button_set);
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
-        sBtnLight = findViewById(R.id.smartBtnLight);
-        sBtnLight = findViewById(R.id.smartBtnMedium);
-        sBtnLight = findViewById(R.id.smartBtnHeavy);
+
         mButtonSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
