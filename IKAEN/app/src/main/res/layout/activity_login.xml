@@ -54,6 +54,7 @@
         android:layout_marginStart="20dp"
         android:text="Login"
         android:layout_marginEnd="20dp"
+        android:backgroundTint="#013A67"
         android:layout_marginTop="40dp" />
 
     <LinearLayout
@@ -74,6 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Register Now"
+            android:textColor="#013A67"
             android:textStyle="bold"/>
 
     </LinearLayout>

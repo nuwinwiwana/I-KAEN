@@ -30,7 +30,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="24dp"
             android:text="Setting"
-            android:textSize="30sp"
+            android:textSize="50sp"
             app:fontFamily="sans-serif-condensed"
             android:textColor="#E4EEF0"
             app:layout_constraintEnd_toStartOf="@+id/imageViewSetting1"

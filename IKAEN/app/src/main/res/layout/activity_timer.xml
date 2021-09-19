@@ -18,6 +18,7 @@
         android:id="@+id/button_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#013A67"
         android:layout_alignTop="@+id/edit_text_input"
         android:layout_toEndOf="@+id/edit_text_input"
         android:text="Set"
@@ -36,6 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/text_view_countdown"
+        android:backgroundTint="#013A67"
         android:layout_centerHorizontal="true"
         android:text="start" />
     <Button
@@ -45,6 +47,7 @@
         android:layout_below="@+id/text_view_countdown"
         android:layout_marginStart="11dp"
         android:layout_toEndOf="@+id/button_start_pause"
+        android:backgroundTint="#013A67"
         android:text="reset"
         android:visibility="invisible"
         tools:visibility="visible"
