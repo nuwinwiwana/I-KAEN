@@ -19,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import static android.content.ContentValues.TAG;
 
 
+
 public class ProfilePage extends AppCompatActivity {
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -26,6 +27,7 @@ public class ProfilePage extends AppCompatActivity {
 
     TextView fullname;
     TextView email;
+
 
 
 
@@ -69,11 +71,14 @@ public class ProfilePage extends AppCompatActivity {
 
             }
 
+
             @Override
             public void onCancelled(DatabaseError error) {
                 // Failed to read value
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+
             }
         }
