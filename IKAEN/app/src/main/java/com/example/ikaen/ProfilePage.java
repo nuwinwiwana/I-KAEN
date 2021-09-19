@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -22,11 +23,16 @@ import static android.content.ContentValues.TAG;
 
 public class ProfilePage extends AppCompatActivity {
 
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     String UID;
 
     TextView fullname;
     TextView email;
+    TextView phone;
+
+
+
 
 
 
@@ -38,10 +44,22 @@ public class ProfilePage extends AppCompatActivity {
 
         fullname=findViewById(R.id.fullnametv);
         email=findViewById(R.id.emailtv);
+        phone =findViewById(R.id.phoneTv);
         getprofile();
+        final Button editBtn = findViewById(R.id.editbtn);
+
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(ProfilePage.this,editprofilepage.class));
+            }
+        });
 
 
     }
+
+
     public void getprofile(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -64,6 +82,7 @@ public class ProfilePage extends AppCompatActivity {
                 usermodel user = dataSnapshot.getValue(usermodel.class);
                 fullname.setText(user.getFullname());
                 email.setText(user.getemail());
+                phone.setText(user.getPhone());
                 Log.d(TAG, "Value is: " + user.getFullname());
                 Log.d(TAG, "Value is: " + user.getemail());
                 Log.d(TAG, "Value is: " + user.getPhone());

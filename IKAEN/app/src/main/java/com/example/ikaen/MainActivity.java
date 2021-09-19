@@ -1,5 +1,6 @@
 package com.example.ikaen;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +23,10 @@ import static android.content.ContentValues.TAG;
 
 
 public class MainActivity extends AppCompatActivity {
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         // whenever data at this location is updated.
                         String value = dataSnapshot.getValue(String.class);
                         Log.d(TAG, "Value is:  " + value);
+
                     }
 
                     @Override
@@ -101,5 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,weatherInfo.class));
             }
         });
-    }
-}
+
+
+}}
