@@ -8,6 +8,7 @@ public class usermodel {
         private String password;
 
 
+
         public usermodel() {}
 
         public usermodel(String email, String fullname,String phone,String password) {
@@ -15,6 +16,7 @@ public class usermodel {
             this.fullname = fullname;
             this.phone = phone;
             this.password = password;
+
 
         }
 
@@ -33,6 +35,8 @@ public class usermodel {
         public String getPassword(){
             return password;
         }
+
+
 
 
 }

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://ikaen-a3973-default-rtdb.asia-southeast1.firebasedatabase.app/");
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     String UID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
-    TextView  name;
+    TextView  fullname;
     DatabaseReference myRef = database.getReference("users/" + UID);
 
 
@@ -38,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
 
-
-        name = findViewById(R.id.textTitle);
+        fullname = findViewById(R.id.textTitle);
 
 
         super.onCreate(savedInstanceState);
@@ -116,5 +115,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
+    
 }
