@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E4EEF0"
+    android:background="#055d6b"
     tools:context=".verify">
 
     <Button
@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         android:text="request verify"
 
+        android:textColor="#e1aa12"
+        android:textColorLink="#e1aa12"
         app:backgroundTint="#013A67"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
