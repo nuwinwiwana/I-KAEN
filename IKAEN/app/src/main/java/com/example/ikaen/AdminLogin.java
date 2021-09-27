@@ -1,5 +1,6 @@
 package com.example.ikaen;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,18 +20,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import static android.content.ContentValues.TAG;
+import android.os.Bundle;
 
-public class login extends AppCompatActivity {
+public class AdminLogin extends AppCompatActivity {
     private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_admin_login);
 
-
-// ...
-// Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
 
         final EditText email = findViewById(R.id.email);
@@ -38,34 +36,32 @@ public class login extends AppCompatActivity {
         final Button loginBtn = findViewById(R.id.LoginBtn);
         final TextView registerNowBtn = findViewById(R.id.registerNowBtn);
         final TextView ForgotPassword = findViewById(R.id.FgtPasswordBtn );
-        final TextView adminLogin = findViewById(R.id.AdminLogin);
 
-     loginBtn.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-             final String emailTxt = email.getText().toString();
-             final String passwordTxt = password.getText().toString();
+                final String emailTxt = email.getText().toString();
+                final String passwordTxt = password.getText().toString();
 
-             if(emailTxt.isEmpty() || passwordTxt.isEmpty()){
-                 Toast.makeText(login.this, "Please enter your email or Password", Toast.LENGTH_SHORT).show();
-             }
-             else{
+                if(emailTxt.isEmpty() || passwordTxt.isEmpty()){
+                    Toast.makeText(AdminLogin.this, "Please enter your email or Password", Toast.LENGTH_SHORT).show();
+                }
+                else{
                     login(emailTxt,passwordTxt);
-             }
-         }
-     });
+                }
+            }
+        });
 
+        registerNowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-     registerNowBtn.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View v) {
+                //open Register activity
 
-             //open Register activity
-
-             startActivity(new Intent(login.this,register.class));
-         }
-     });
+                startActivity(new Intent(AdminLogin.this,register.class));
+            }
+        });
 
         ForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,14 +69,7 @@ public class login extends AppCompatActivity {
 
                 //open Forgot password activity
 
-                startActivity(new Intent(login.this,ForgotPassword.class));
-            }
-        });
-
-        adminLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(login.this,AdminLogin.class));
+                startActivity(new Intent(AdminLogin.this,ForgotPassword.class));
             }
         });
 
@@ -98,21 +87,20 @@ public class login extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             if(!user.isEmailVerified()){
-                                startActivity(new Intent(login.this,verify.class));
+                                startActivity(new Intent(AdminLogin.this,verify.class));
                             }else{
-                                startActivity(new Intent(login.this,MainActivity.class));
+                                startActivity(new Intent(AdminLogin.this,Admin.class));
                             }
                             //updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
-                            Toast.makeText(login.this, "Authentication failed.",
+                            Toast.makeText(AdminLogin.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
                             //updateUI(null);
                         }
                     }
                 });
-
 
     }
 }
