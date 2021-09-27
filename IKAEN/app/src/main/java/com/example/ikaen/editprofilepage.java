@@ -99,7 +99,7 @@ public class editprofilepage extends AppCompatActivity {
 
             final String email = profileEmail.getText().toString();
             user.updateEmail(email).addOnSuccessListener(unused -> {
-                Toast.makeText(editprofilepage.this, "Email is changed.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(editprofilepage.this, "saved", Toast.LENGTH_SHORT).show();
                 //update database after done update email
                 databaseReference.child("users").child(user.getUid()).child("fullname").setValue(profileFullName.getText().toString());
                 databaseReference.child("users").child(user.getUid()).child("email").setValue(email);
