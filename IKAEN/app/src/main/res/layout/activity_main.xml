@@ -11,8 +11,10 @@
         android:id="@+id/headerBackground"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_125sdp"
-        android:background = " #072446"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:background=" #072446"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
