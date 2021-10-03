@@ -114,12 +114,13 @@
                 android:text="Tempature"
                 android:textColor="#072446"
                 android:textSize="@dimen/_10ssp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15°C"
                 android:textColor="#072446"
-                android:textSize="@dimen/_16ssp"/>
+                android:textSize="@dimen/_16ssp" />
 
         </LinearLayout>
 
