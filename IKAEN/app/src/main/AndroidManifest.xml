@@ -13,8 +13,7 @@
         android:theme="@style/Theme.IKAEN">
         <activity android:name=".AdminLogin"></activity>
         <activity android:name=".Admin" />
-        <activity android:name=".Admin_Login" />
-        <activity android:name=".splashScreen" />
+        <activity android:name=".login" />
         <activity android:name=".editprofilepage" />
         <activity android:name=".weatherInfo" />
         <activity android:name=".activityHistory" />
@@ -25,7 +24,7 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".verify" />
         <activity android:name=".register" />
-        <activity android:name=".login">
+        <activity android:name=".splashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
