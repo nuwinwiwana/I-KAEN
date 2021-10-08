@@ -58,11 +58,11 @@ public class spam extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                firebaseAuth = FirebaseAuth.getInstance();
+               
                 firebaseDatabase = FirebaseDatabase.getInstance();
-                DatabaseReference storageReference = firebaseDatabase.getReference("Feedback").child(firebaseAuth.getUid());
+                DatabaseReference storageReference = firebaseDatabase.getReference("Device");
 
-                FeedbackDetails feedbackDetails = new FeedbackDetails("1");
+                FeedbackDetails feedbackDetails = new FeedbackDetails(1);
                 storageReference.setValue(feedbackDetails);
 
                 Toast.makeText(spam.this, "device activating", Toast.LENGTH_SHORT).show();
@@ -76,11 +76,11 @@ public class spam extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                firebaseAuth = FirebaseAuth.getInstance();
-                firebaseDatabase = FirebaseDatabase.getInstance();
-                DatabaseReference storageReference = firebaseDatabase.getReference("Feedback").child(firebaseAuth.getUid());
 
-                FeedbackDetails feedbackDetails = new FeedbackDetails("0");
+                firebaseDatabase = FirebaseDatabase.getInstance();
+                DatabaseReference storageReference = firebaseDatabase.getReference("Device");
+
+                FeedbackDetails feedbackDetails = new FeedbackDetails(0);
                 storageReference.setValue(feedbackDetails);
 
 

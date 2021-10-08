@@ -2,21 +2,21 @@ package com.example.ikaen;
 
 public class FeedbackDetails {
 
-        private String message;
+        private Integer value;
 
         public FeedbackDetails() {
         }
 
-        public FeedbackDetails(String message) {
-            this.message = message;
+        public FeedbackDetails(Integer value) {
+            this.value = value;
         }
 
-        public String getMessage() {
-            return message;
+        public Integer getValue() {
+            return value;
         }
 
-        public void setMessage(String message) {
-            this.message = message;
+        public void setValue(Integer value) {
+            this.value = value;
         }
 
 }
