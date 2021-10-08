@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IKAEN">
-        <activity android:name=".ViewProfileAdmin"></activity>
+        <activity android:name=".EditProfileAdmin"></activity>
+        <activity android:name=".ViewProfileAdmin" />
         <activity android:name=".spam" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".Admin" />
