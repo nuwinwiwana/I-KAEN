@@ -59,7 +59,7 @@ public class AdminLogin extends AppCompatActivity {
 
                 //open Register activity
 
-                startActivity(new Intent(AdminLogin.this,register.class));
+                startActivity(new Intent(AdminLogin.this,adminRegister.class));
             }
         });
 
