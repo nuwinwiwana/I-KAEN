@@ -29,8 +29,8 @@ import java.util.Objects;
 
 public class ProfilePage extends AppCompatActivity {
 
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://ikaen-a3973-default-rtdb.asia-southeast1.firebasedatabase.app/");
     FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference = database.getReferenceFromUrl("https://ikaen-a3973-default-rtdb.asia-southeast1.firebasedatabase.app/");
     StorageReference storageReference = FirebaseStorage.getInstance().getReference();
     String UID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
     FirebaseAuth fAuth;
@@ -55,6 +55,7 @@ public class ProfilePage extends AppCompatActivity {
 
 
         StorageReference profileRef = storageReference.child("users/"+fAuth.getCurrentUser().getUid()+"profile.jpg");
+
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
@@ -86,19 +87,12 @@ public class ProfilePage extends AppCompatActivity {
                 fullname.setText(userData.getFullname());
                 email.setText(userData.getemail());
                 phone.setText(userData.getPhone());
-                //add get profile image example provided below
-                //profileImageView.setImageURI(userData.getProfilePicture());
-                //to use this, u need to modify usermodel class by adding this
-                //private Uri profilePicture;
-                //public usermodel(....., Uri profilePicture){
-                //......;
-                // this.profilePicture = profilePicture;
-                //}
-                //public Uri getProfilePicture(){ return profilePicture;}
+
             }
         });
 
-        DatabaseReference myRef = database.getReference("users/" + UID);
+
+        DatabaseReference myRef =database.getReference("users/" + UID);
 
 
         // Read from the database
@@ -108,8 +102,9 @@ public class ProfilePage extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 usermodel user = dataSnapshot.getValue(usermodel.class);
-                assert user != null;
-                fullname.setText(user.getFullname());
+                Log.d(TAG, "Value is: " + user);
+                 assert user != null;
+              fullname.setText(user.getFullname());
                 email.setText(user.getemail());
                 phone.setText(user.getPhone());
                 Log.d(TAG, "Value is: " + user.getFullname());

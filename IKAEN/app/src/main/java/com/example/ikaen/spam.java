@@ -54,6 +54,7 @@ public class spam extends AppCompatActivity {
         sendDatabtn = findViewById(R.id.startBtn);
         sendstopData = findViewById(R.id.stopBtn);
 
+
         sendDatabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,6 +88,8 @@ public class spam extends AppCompatActivity {
                 Toast.makeText(spam.this, "pulling device", Toast.LENGTH_SHORT).show();
             }
         });
+
+
 
 
     }
