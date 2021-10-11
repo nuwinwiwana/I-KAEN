@@ -6,6 +6,7 @@ public class usermodel {
         private String email;
         private String phone;
         private String password;
+    private String tempature;
 
 
 
@@ -16,6 +17,7 @@ public class usermodel {
             this.fullname = fullname;
             this.phone = phone;
             this.password = password;
+            this.tempature = tempature;
 
 
         }
@@ -35,6 +37,10 @@ public class usermodel {
         public String getPassword(){
             return password;
         }
+
+    public String getTempature() {
+        return tempature;
+    }
 
 
 

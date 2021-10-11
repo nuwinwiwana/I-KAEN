@@ -34,12 +34,15 @@ import static android.content.ContentValues.TAG;
 public class MainActivity extends AppCompatActivity {
 
 
-    TextView  fullname,more;
+    TextView  fullname,more, celciusPer, humidtyPer, pressurePer;
     CardView c1, c2,c3,c4;
     ImageView widget;
    // DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://ikaen-a3973-default-rtdb.asia-southeast1.firebasedatabase.app/");
     FirebaseDatabase database = FirebaseDatabase.getInstance();
+    FirebaseDatabase databaseReference;
+    FirebaseDatabase Dbase = FirebaseDatabase.getInstance();
     String UID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
+    // FirebaseDatabase firebaseDatabase;
 
 
 
@@ -55,12 +58,15 @@ public class MainActivity extends AppCompatActivity {
         c3 = findViewById(R.id.card3);
         c4 = findViewById(R.id.card4);
         more = findViewById(R.id.more);
+        humidtyPer = findViewById(R.id.humidity_percent);
+        celciusPer = findViewById(R.id.tempature_c);
+        pressurePer = findViewById(R.id.pressure_percent);
+       databaseReference = FirebaseDatabase.getInstance();
 
-       // showAllUserData();
 
 
 
-       DatabaseReference myref = database.getReference("users/" + UID);
+       DatabaseReference myref = Dbase.getReference("users/" + UID);
 
         myref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 String name = user.getFullname();
                 fullname.setText(name);
 
+
             }
 
             @Override
@@ -78,6 +85,33 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
+         DatabaseReference temp = database.getReference().child("Tempature");
+
+        temp.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                usermodel sens = snapshot.getValue(usermodel.class);
+                assert sens != null;
+                String tempature = sens.getTempature();
+
+                celciusPer.setText(tempature);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
 
 
 
@@ -128,14 +162,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   /*private void showAllUserData() {
-        Intent intent = getIntent();
-        String user_name = intent.getStringExtra("fullname");
 
-        fullname.setText(user_name);
-    }
-
-    */
 
 
 
