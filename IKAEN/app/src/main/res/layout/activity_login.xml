@@ -55,10 +55,18 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
+<<<<<<< HEAD
         android:backgroundTint="#013A67"
         android:fontFamily="serif"
         android:text="LOGIN"
         android:textStyle="bold" />
+=======
+        android:background="@drawable/rectangle_3"
+        android:fontFamily="sans-serif-condensed"
+        android:text="LOGIN"
+        android:textColor="#e1aa12"
+        app:backgroundTint="#013A67" />
+>>>>>>> 68ca706e71c5258d319d0bbd6d78de416886f4c3
 
     <LinearLayout
         android:layout_width="wrap_content"
