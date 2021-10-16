@@ -24,6 +24,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.net.HttpCookie;
+import java.util.Map;
 import java.util.Objects;
 
 import okhttp3.internal.cache.DiskLruCache;
@@ -86,23 +87,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-         DatabaseReference temp = database.getReference().child("Tempature");
+         DatabaseReference temp = database.getReference("Tempature/");
 
         temp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                usermodel sens = snapshot.getValue(usermodel.class);
-                assert sens != null;
-                String tempature = sens.getTempature();
 
-                celciusPer.setText(tempature);
+                Map<String, Object> temp = (Map<String, Object>) snapshot.getValue();
+                Log.d("owo","dapat" + temp.get("celcius"));
+                celciusPer.setText(temp.get("celcius").toString());
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        DatabaseReference humi = database.getReference("Humidity/");
+
+        humi.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+
+                Map<String, Object> humi = (Map<String, Object>) snapshot.getValue();
+                Log.d("uwu","dapat" + humi.get("humidity"));
+                humidtyPer.setText(humi.get("humidity").toString());
             }
 
             @Override
@@ -112,8 +124,23 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        DatabaseReference pres = database.getReference("Pressure/");
+
+        pres.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
 
 
+                Map<String, Object> pres = (Map<String, Object>) snapshot.getValue();
+                Log.d("owo","dapat" + pres.get("Hpa"));
+                pressurePer.setText(pres.get("Hpa").toString());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         widget.setOnClickListener(new View.OnClickListener() {
 
