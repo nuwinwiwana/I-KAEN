@@ -113,6 +113,7 @@
                     android:textColor="#072446"
                     android:textSize="@dimen/_10ssp"/>
                 <TextView
+                    android:id="@+id/tempature_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="15°C"
@@ -145,6 +146,7 @@
                     android:textColor="#072446"
                     android:textSize="@dimen/_10ssp"/>
                 <TextView
+                    android:id="@+id/humidity_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="40%"
@@ -178,6 +180,7 @@
                     android:textColor="#072446"
                     android:textSize="@dimen/_10ssp"/>
                 <TextView
+                    android:id="@+id/pressure_percent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="47%"

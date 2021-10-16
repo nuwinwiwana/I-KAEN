@@ -47,6 +47,12 @@ public class AdminLogin extends AppCompatActivity {
                 if(emailTxt.isEmpty() || passwordTxt.isEmpty()){
                     Toast.makeText(AdminLogin.this, "Please enter your email or Password", Toast.LENGTH_SHORT).show();
                 }
+                else if (passwordTxt.isEmpty()){
+                    Toast.makeText(AdminLogin.this, "Please enter your Password", Toast.LENGTH_SHORT).show();
+                }
+                else if (emailTxt.isEmpty()){
+                    Toast.makeText(AdminLogin.this, "Please enter your email", Toast.LENGTH_SHORT).show();
+                }
                 else{
                     login(emailTxt,passwordTxt);
                 }
@@ -57,8 +63,6 @@ public class AdminLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //open Register activity
-
                 startActivity(new Intent(AdminLogin.this,adminRegister.class));
             }
         });
@@ -66,8 +70,6 @@ public class AdminLogin extends AppCompatActivity {
         ForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                //open Forgot password activity
 
                 startActivity(new Intent(AdminLogin.this,ForgotPassword.class));
             }
@@ -85,8 +87,8 @@ public class AdminLogin extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            if(!user.isEmailVerified()){
+                            FirebaseUser admin = mAuth.getCurrentUser();
+                            if(!admin.isEmailVerified()){
                                 startActivity(new Intent(AdminLogin.this,verify.class));
                             }else{
                                 startActivity(new Intent(AdminLogin.this,Admin.class));

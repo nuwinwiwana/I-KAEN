@@ -37,7 +37,7 @@ public class login extends AppCompatActivity {
         final Button loginBtn = findViewById(R.id.LoginBtn);
         final TextView registerNowBtn = findViewById(R.id.registerNowBtn);
         final TextView ForgotPassword = findViewById(R.id.FgtPasswordBtn );
-        final TextView adminLogin = findViewById(R.id.AdminLogin);
+
 
      loginBtn.setOnClickListener(new View.OnClickListener() {
          @Override
@@ -48,6 +48,12 @@ public class login extends AppCompatActivity {
 
              if(emailTxt.isEmpty() || passwordTxt.isEmpty()){
                  Toast.makeText(login.this, "Please enter your email or Password", Toast.LENGTH_SHORT).show();
+             }
+             else if (passwordTxt.isEmpty()){
+                 Toast.makeText(login.this, "Please enter your Password", Toast.LENGTH_SHORT).show();
+             }
+             else if (emailTxt.isEmpty()){
+                 Toast.makeText(login.this, "Please enter your email", Toast.LENGTH_SHORT).show();
              }
              else{
                     login(emailTxt,passwordTxt);
@@ -76,12 +82,7 @@ public class login extends AppCompatActivity {
             }
         });
 
-        adminLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(login.this,AdminLogin.class));
-            }
-        });
+
 
     }
 

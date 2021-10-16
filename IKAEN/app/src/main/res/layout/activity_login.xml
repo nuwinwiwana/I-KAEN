@@ -4,20 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/activity_login"
+    android:background="#072446"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".login">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="left"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+        android:text="LOGIN"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/email"
-        android:layout_width="400dp"
-        android:layout_height="63dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:fontFamily="serif"
+        android:fontFamily="sans-serif-condensed"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
@@ -30,6 +40,7 @@
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFF"
         android:textColorLink="#FFFFFF" />
+
 
     <EditText
         android:id="@+id/password"
@@ -55,18 +66,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
-<<<<<<< HEAD
         android:backgroundTint="#013A67"
-        android:fontFamily="serif"
-        android:text="LOGIN"
-        android:textStyle="bold" />
-=======
-        android:background="@drawable/rectangle_3"
         android:fontFamily="sans-serif-condensed"
-        android:text="LOGIN"
-        android:textColor="#e1aa12"
-        app:backgroundTint="#013A67" />
->>>>>>> 68ca706e71c5258d319d0bbd6d78de416886f4c3
+        android:text="Login" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -102,33 +104,5 @@
         android:text="Forgot Password?"
         android:textColor="#E1AA12"
         android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/An_Admin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed"
-            android:text="An Admin?"
-            android:textColor="@color/white"
-            android:textStyle="bold" />
-
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/AdminLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
-        android:text="Admin Login Here"
-        android:textColor="#E1AA12"
-        android:textStyle="bold" />
-
 
 </LinearLayout>

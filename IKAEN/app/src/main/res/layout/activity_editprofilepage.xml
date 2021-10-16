@@ -4,7 +4,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#072446">
+    android:background="#Fac83e">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -23,14 +23,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
-        android:textColor="#E1AA12"
+        android:textColor="#072446"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
     <EditText
         android:id="@+id/fullnametv"
@@ -39,8 +39,9 @@
         android:layout_marginTop="10dp"
         android:text="Fullname"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullname" />
 
@@ -48,56 +49,62 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
         android:text="Email"
-        android:textColor="#E1AA12"
+        android:textColor="#072446"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fullnametv" />
+        app:layout_constraintTop_toBottomOf="@+id/fullnametv"/>
 
     <EditText
         android:id="@+id/emailtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Email@email.com"
+        android:text="Email@ggg.com"
+        android:textSize="@dimen/_15sdp"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/email"  />
 
     <TextView
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
         android:text="Phone Number"
-        android:textColor="#E1AA12"
+        android:textColor="#072446"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/emailtv" />
+        app:layout_constraintTop_toBottomOf="@+id/emailtv"/>
 
     <EditText
         android:id="@+id/phoneTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="(+60)19-222222"
+        android:textSize="@dimen/_15sdp"
+        android:text="(+60)19-3352311"
         android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        app:layout_constraintTop_toBottomOf="@+id/phone"  />
 
     <Button
         android:id="@+id/ChgPassBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#013A67"
         android:text="Change Password"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -108,8 +115,11 @@
 
     <Button
         android:id="@+id/ChgImgBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#013A67"
         android:text="Change Image"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,8 +130,10 @@
 
     <Button
         android:id="@+id/saveBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="#013A67"
         android:text="Save Changes"
         app:layout_constraintEnd_toEndOf="parent"

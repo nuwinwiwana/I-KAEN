@@ -56,7 +56,9 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_16sdp">
 
-            <TextView
+
+
+                <TextView
                 android:id="@+id/weatherText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,14 +70,13 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <LinearLayout
+             <LinearLayout
                 android:id="@+id/tempature"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8sdp"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@+id/humidity"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/weatherText">
 
@@ -100,12 +101,41 @@
                     android:textColor="#072446"
                     android:textSize="@dimen/_16ssp" />
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tempatureInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_16ssp"
+                    android:gravity="left"
+                    android:orientation="vertical"
+                    app:layout_constraintLeft_toRightOf="@+id/tempature"
+                    app:layout_constraintTop_toBottomOf="@+id/weatherText">
+
+                    <TextView
+                        android:id="@+id/status1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="Status"
+                        android:textColor="#072446"
+                        android:textSize="@dimen/_14ssp"
+                        />
+
+                    <TextView
+                        android:id="@+id/statusTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="Above Average"
+                        android:textColor="#072446"
+                        android:textSize="@dimen/_10ssp"
+                        />
 
 
-
-            </LinearLayout>
-
-
+                 </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -184,6 +214,40 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:id="@+id/HumidityInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_16ssp"
+                android:gravity="left"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@+id/humidityOwo"
+                app:layout_constraintTop_toBottomOf="@+id/HumidityText">
+
+                <TextView
+                    android:id="@+id/status2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Status"
+                    android:textColor="#072446"
+                    android:textSize="@dimen/_14ssp"
+                    />
+
+                <TextView
+                    android:id="@+id/statusHumi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Above Average"
+                    android:textColor="#072446"
+                    android:textSize="@dimen/_10ssp"
+                    />
+
+
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
@@ -246,6 +310,42 @@
                     android:textSize="@dimen/_16ssp" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/PressureInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginLeft="@dimen/_16ssp"
+                android:gravity="left"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toRightOf="@+id/PressureOwo"
+                app:layout_constraintTop_toBottomOf="@+id/PressureText">
+
+                <TextView
+                    android:id="@+id/status3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Status"
+                    android:textColor="#072446"
+                    android:textSize="@dimen/_14ssp"
+                    />
+
+                <TextView
+                    android:id="@+id/statusPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="Above Average"
+                    android:textColor="#072446"
+                    android:textSize="@dimen/_10ssp"
+                    />
+
+
+            </LinearLayout>
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

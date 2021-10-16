@@ -92,23 +92,23 @@ public class adminRegister extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser admin = mAuth.getCurrentUser();
                             //updateUI(user);
 
-                            databaseReference.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
+                            databaseReference.child("admin").addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                                    if (snapshot.hasChild(user.getUid())) {
+                                    if (snapshot.hasChild(admin.getUid())) {
                                         Toast.makeText(adminRegister.this, "email is already registered", Toast.LENGTH_SHORT).show();
                                     } else {
-                                        databaseReference.child("users").child(user.getUid()).child("fullname").setValue(fullname);
-                                        databaseReference.child("users").child(user.getUid()).child("email").setValue(email);
-                                        databaseReference.child("users").child(user.getUid()).child("password").setValue(password);
-                                        databaseReference.child("users").child(user.getUid()).child("phone").setValue(phone);
+                                        databaseReference.child("admin").child(admin.getUid()).child("fullname").setValue(fullname);
+                                        databaseReference.child("admin").child(admin.getUid()).child("email").setValue(email);
+                                        databaseReference.child("admin").child(admin.getUid()).child("password").setValue(password);
+                                        databaseReference.child("admin").child(admin.getUid()).child("phone").setValue(phone);
 
                                         Toast.makeText(adminRegister.this, "user registered succsesfully", Toast.LENGTH_SHORT).show();
-                                        if(!user.isEmailVerified()){
+                                        if(!admin.isEmailVerified()){
                                             startActivity(new Intent(adminRegister.this,verify.class));
                                         }
                                         finish();
