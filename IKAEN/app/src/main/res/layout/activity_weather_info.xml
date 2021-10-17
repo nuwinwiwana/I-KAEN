@@ -85,21 +85,8 @@
                     android:layout_height="@dimen/_28sdp"
                     android:src="@drawable/celsius" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:text="Tempature"
-                    android:textColor="#072446"
-                    android:textSize="@dimen/_10ssp" />
 
-                <TextView
-                    android:id="@+id/tempature_c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="--"
-                    android:textColor="#072446"
-                    android:textSize="@dimen/_16ssp" />
+
 
                 </LinearLayout>
 
@@ -194,21 +181,9 @@
                     android:layout_height="@dimen/_28sdp"
                     android:src="@drawable/humidity" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:text="Humidity"
-                    android:textColor="#072446"
-                    android:textSize="@dimen/_10ssp" />
 
-                <TextView
-                    android:id="@+id/humidity_hpa"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="--"
-                    android:textColor="#072446"
-                    android:textSize="@dimen/_16ssp" />
+
+
 
 
 
@@ -293,21 +268,8 @@
                     android:layout_height="@dimen/_28sdp"
                     android:src="@drawable/gauge" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:text="Preasure"
-                    android:textColor="#072446"
-                    android:textSize="@dimen/_10ssp" />
 
-                <TextView
-                    android:id="@+id/Pressure_level"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="--"
-                    android:textColor="#072446"
-                    android:textSize="@dimen/_16ssp" />
+
 
             </LinearLayout>
 

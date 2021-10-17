@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminTimer">
+    android:background="@drawable/background_gradient"
+    android:gravity="center"
+    tools:context=".timer">
+    <EditText
+        android:id="@+id/edit_text_input"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_view_countdown"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="@color/white"
+        android:hint="Minutes"
+        android:inputType="number"
+        android:maxLength="4" />
+    <Button
+        android:id="@+id/button_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="#013A67"
+        android:layout_alignTop="@+id/edit_text_input"
+        android:layout_toEndOf="@+id/edit_text_input"
+        android:text="Set"
+        android:layout_toRightOf="@+id/edit_text_input" />
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="00:00"
+        android:textColor="@android:color/white"
+        android:textSize="60sp" />
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_countdown"
+        android:backgroundTint="@color/white"
+        android:textColor="#013A67"
+        android:layout_centerHorizontal="true"
+        android:text="start" />
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_countdown"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/button_start_pause"
+        android:backgroundTint="@color/white"
+        android:textColor="#013A67"
+        android:text="reset"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/button_start_pause" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

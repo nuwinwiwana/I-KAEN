@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#Fac83e"
+    android:gravity="center"
     tools:context=".MainActivity">
 
 
@@ -12,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:backgroundTint="@color/black"
         android:text="Start"
         android:textAllCaps="false" />
 
@@ -19,6 +22,7 @@
         android:id="@+id/stopBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
         android:layout_below="@id/startBtn"
         android:layout_margin="10dp"
         android:text="Stop"

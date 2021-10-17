@@ -28,7 +28,7 @@
         android:textSize="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
@@ -36,9 +36,9 @@
         android:id="@+id/fullnametv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Fullname"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:textSize="@dimen/_15sdp"
         android:layout_marginLeft="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
@@ -55,7 +55,7 @@
         android:textSize="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullnametv"/>
 
@@ -63,10 +63,10 @@
         android:id="@+id/emailtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="Email@ggg.com"
         android:textSize="@dimen/_15sdp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:layout_marginLeft="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,10 +79,10 @@
         android:text="Phone Number"
         android:textColor="#072446"
         android:textStyle="bold"
-        android:textSize="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginLeft="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailtv"/>
 
@@ -90,10 +90,10 @@
         android:id="@+id/phoneTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:textSize="@dimen/_15sdp"
         android:text="(+60)19-3352311"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/black"
         android:layout_marginLeft="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#013A67"
+        android:backgroundTint="@color/black"
         android:text="Change Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +120,7 @@
         android:layout_marginStart="20dp"
 
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#013A67"
+        android:backgroundTint="@color/black"
         android:text="Change Image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#013A67"
+        android:backgroundTint="@color/black"
         android:text="Save Changes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"

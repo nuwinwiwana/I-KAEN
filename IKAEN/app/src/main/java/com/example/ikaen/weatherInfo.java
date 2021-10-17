@@ -1,14 +1,11 @@
-
 package com.example.ikaen;
 
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,21 +17,18 @@ import java.util.Map;
 
 public class weatherInfo extends AppCompatActivity {
 
-    TextView celciusPer, humidtyPer, pressurePer;
+    TextView statusTemp,statusPressure,statusHumi;
+
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     FirebaseDatabase databaseReference;
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_info);
-
-        humidtyPer = findViewById(R.id.humidity_hpa);
-        celciusPer = findViewById(R.id.tempature_c);
-        pressurePer = findViewById(R.id.Pressure_level);
+        statusTemp = findViewById(R.id.statusTemp);
+        statusPressure = findViewById(R.id.statusPressure);
+        statusHumi = findViewById(R.id.statusHumi);
         databaseReference = FirebaseDatabase.getInstance();
 
 
@@ -47,7 +41,9 @@ public class weatherInfo extends AppCompatActivity {
 
                 Map<String, Object> temp = (Map<String, Object>) snapshot.getValue();
                 Log.d("owo","dapat" + temp.get("celcius"));
-                celciusPer.setText(temp.get("celcius").toString());
+
+                statusTemp.setText("The Tempature is " + temp.get("celcius").toString());
+
             }
 
             @Override
@@ -55,6 +51,7 @@ public class weatherInfo extends AppCompatActivity {
 
             }
         });
+
 
         DatabaseReference humi = database.getReference("Humidity/");
 
@@ -65,7 +62,7 @@ public class weatherInfo extends AppCompatActivity {
 
                 Map<String, Object> humi = (Map<String, Object>) snapshot.getValue();
                 Log.d("uwu","dapat" + humi.get("humidity"));
-                humidtyPer.setText(humi.get("humidity").toString());
+                statusHumi.setText("The Humidity Level is " + humi.get("humidity").toString());
             }
 
             @Override
@@ -84,7 +81,7 @@ public class weatherInfo extends AppCompatActivity {
 
                 Map<String, Object> pres = (Map<String, Object>) snapshot.getValue();
                 Log.d("owo","dapat" + pres.get("Hpa"));
-                pressurePer.setText(pres.get("Hpa").toString());
+                statusPressure.setText("The Pressure Level is " + pres.get("Hpa").toString());
             }
 
             @Override
@@ -92,25 +89,7 @@ public class weatherInfo extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
+
+
 }

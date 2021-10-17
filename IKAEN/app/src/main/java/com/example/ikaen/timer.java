@@ -1,10 +1,5 @@
 package com.example.ikaen;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.os.Bundle;
@@ -25,9 +20,6 @@ public class timer extends AppCompatActivity {
     private EditText mEditTextInput;
     private TextView mTextViewCountDown;
     private Button mButtonSet;
-    private Button sBtnLight;
-    private Button sBtnMedium;
-    private Button sBtnHeavy;
     private Button mButtonStartPause;
     private Button mButtonReset;
     private CountDownTimer mCountDownTimer;
