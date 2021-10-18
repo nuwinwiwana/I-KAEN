@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IKAEN">
-        <activity android:name=".AdminBtn"></activity>
+        <activity android:name=".ViewListOfUser"></activity>
+        <activity android:name=".AdminBtn" />
         <activity android:name=".AdminTimer" />
         <activity android:name=".AdminWeatherInfo" />
         <activity android:name=".AdminCamera" />
