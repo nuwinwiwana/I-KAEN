@@ -1,6 +1,9 @@
 package com.example.ikaen;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +14,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import java.util.Locale;
 
@@ -38,6 +43,13 @@ public class AdminTimer extends AppCompatActivity {
         mButtonStartPause = findViewById(R.id.button_start_pause);
         mButtonReset = findViewById(R.id.button_reset);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+
+            NotificationChannel channel = new NotificationChannel("Notification","Notification", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+
         mButtonSet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +65,16 @@ public class AdminTimer extends AppCompatActivity {
                 }
                 setTime(millisInput);
                 mEditTextInput.setText("");
+
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminTimer.this, "Notification");
+                builder.setContentTitle("Timer Notification");
+                builder.setContentText("Timer Have been set");
+                builder.setSmallIcon(R.drawable.stopwatch);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(AdminTimer.this);
+                managerCompat.notify(1, builder.build());
+
             }
         });
         mButtonStartPause.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +82,28 @@ public class AdminTimer extends AppCompatActivity {
             public void onClick(View v) {
                 if (mTimerRunning) {
                     pauseTimer();
+
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminTimer.this, "Notification");
+                    builder.setContentTitle("Timer Notification");
+                    builder.setContentText("Timer Have been stop");
+                    builder.setSmallIcon(R.drawable.stopwatch);
+                    builder.setAutoCancel(true);
+
+                    NotificationManagerCompat managerCompat = NotificationManagerCompat.from(AdminTimer.this);
+                    managerCompat.notify(1, builder.build());
+
                 } else {
                     startTimer();
+
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminTimer.this, "Notification");
+                    builder.setContentTitle("Timer Notification");
+                    builder.setContentText("Timer Continued");
+                    builder.setSmallIcon(R.drawable.stopwatch);
+                    builder.setAutoCancel(true);
+
+                    NotificationManagerCompat managerCompat = NotificationManagerCompat.from(AdminTimer.this);
+                    managerCompat.notify(1, builder.build());
+
                 }
             }
         });
@@ -69,6 +111,17 @@ public class AdminTimer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 resetTimer();
+
+
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminTimer.this, "Notification");
+                builder.setContentTitle("Timer Notification");
+                builder.setContentText("Timer Have been reset");
+                builder.setSmallIcon(R.drawable.stopwatch);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(AdminTimer.this);
+                managerCompat.notify(1, builder.build());
+
             }
         });
 
