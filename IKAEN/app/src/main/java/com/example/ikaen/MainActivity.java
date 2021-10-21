@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
    // DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReferenceFromUrl("https://ikaen-a3973-default-rtdb.asia-southeast1.firebasedatabase.app/");
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     FirebaseDatabase databaseReference;
-    FirebaseDatabase Dbase = FirebaseDatabase.getInstance();
+   FirebaseDatabase Dbase = FirebaseDatabase.getInstance();
     String UID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
     // FirebaseDatabase firebaseDatabase;
 
