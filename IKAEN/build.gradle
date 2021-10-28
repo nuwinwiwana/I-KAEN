@@ -19,11 +19,18 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+
+            url "https://maven.google.com"
+        }
     }
 }
 repositories {
     jcenter()
-    maven { url '<your-SDK-path>/extras/android/m2repository' }
+    maven {
+        url '<your-SDK-path>/extras/android/m2repository'
+
+    }
 }
 task clean(type: Delete) {
     delete rootProject.buildDir
