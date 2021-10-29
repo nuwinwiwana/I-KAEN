@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IKAEN">
+        <activity android:name=".ClientFeedback"></activity>
         <activity android:name=".AdminBtn" />
         <activity android:name=".AdminTimer" />
         <activity android:name=".AdminWeatherInfo" />
@@ -44,7 +45,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity" />
 
         <meta-data
