@@ -7,8 +7,8 @@
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_admin_btn.xml" value="0.16168478260869565" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_admin_or_client.xml" value="0.16168478260869565" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_admin_timer.xml" value="0.16168478260869565" />
-        <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_admin_user_list.xml" value="0.2" />
-        <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_camera.xml" value="0.2" />
+        <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_admin_user_list.xml" value="0.152" />
+        <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_camera.xml" value="0.4" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_edit_profile_admin.xml" value="0.264" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_editprofilepage.xml" value="0.264" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_forgot_password.xml" value="0.136" />
@@ -26,7 +26,9 @@
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_view_profile_admin.xml" value="0.10099637681159421" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/activity_weather_info.xml" value="0.2" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/clientlogin.xml" value="0.264" />
+        <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/history.xml" value="0.4" />
         <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/notification.xml" value="0.136" />
+        <entry key="..\:/Users/margo/Desktop/MASTER IKAEN/IKAEN/app/src/main/res/layout/person.xml" value="0.4" />
       </map>
     </option>
   </component>
