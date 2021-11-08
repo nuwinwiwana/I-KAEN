@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,22 +12,43 @@
 
     <Button
         android:id="@+id/startBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/black"
-        android:text="Start"
-        android:textAllCaps="false" />
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        android:text="START"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_20sdp"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        app:strokeColor="#000000"
+        app:strokeWidth="3dp"
+        android:layout_centerHorizontal="true"
+        app:backgroundTint="#FFFFFF" />
 
     <Button
         android:id="@+id/stopBtn"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
         android:layout_below="@id/startBtn"
-        android:layout_margin="10dp"
-        android:text="Stop"
-        android:textAllCaps="false" />
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="STOP"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        app:backgroundTint="#FFFFFF"
+        app:strokeColor="#000000"
+        app:strokeWidth="3dp" />
 
 
 </RelativeLayout>
