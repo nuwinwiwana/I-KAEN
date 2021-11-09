@@ -167,7 +167,7 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/linearLayoutSetting4"
+            android:id="@+id/linearLayoutSetting6"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:orientation="horizontal"
@@ -176,6 +176,46 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayoutSetting3">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/settingCard5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background = "#Fac83e"
+                    >
+
+                    <TextView
+                        android:id="@+id/contactUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Contact Us"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/white"
+                        app:fontFamily="sans-serif-condensed" />
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayoutSetting4"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSetting6">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/settingCard4"
@@ -212,7 +252,7 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:orientation="horizontal"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:padding="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
