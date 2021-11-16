@@ -15,12 +15,10 @@
 
         <activity android:name=".Aboutus"></activity>
 
-        <activity android:name=".CameraView"></activity>
         <activity android:name=".ClientFeedback" />
         <activity android:name=".AdminBtn" />
         <activity android:name=".AdminTimer" />
         <activity android:name=".AdminWeatherInfo" />
-        <activity android:name=".AdminCamera" />
         <activity android:name=".AdminActivityHistory" />
         <activity android:name=".AdminUserList" />
         <activity android:name=".adminSetting" />
@@ -35,7 +33,6 @@
         <activity android:name=".editprofilepage" />
         <activity android:name=".weatherInfo" />
         <activity android:name=".activityHistory" />
-        <activity android:name=".camera" />
         <activity android:name=".timer" />
         <activity android:name=".setting" />
         <activity android:name=".ProfilePage" />

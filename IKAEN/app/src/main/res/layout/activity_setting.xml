@@ -78,7 +78,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:text="Profile"
                         android:textSize="24sp"
                         app:fontFamily="sans-serif-condensed" />
@@ -116,7 +116,7 @@
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:text="Weather"
                         android:textSize="24sp"
                         app:fontFamily="sans-serif-condensed" />
@@ -155,11 +155,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:text="Camera"
+                        android:text="About Us"
                         android:layout_marginTop="25dp"
                         android:gravity="center"
                         android:textSize="24sp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         app:fontFamily="sans-serif-condensed" />
 
 
@@ -199,7 +199,7 @@
                         android:layout_marginTop="25dp"
                         android:gravity="center"
                         android:textSize="24sp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         app:fontFamily="sans-serif-condensed" />
 
 
@@ -239,7 +239,7 @@
                         android:layout_marginTop="25dp"
                         android:gravity="center"
                         android:textSize="24sp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         app:fontFamily="sans-serif-condensed" />
 
 
@@ -277,7 +277,7 @@
                         android:layout_marginTop="25dp"
                         android:gravity="center"
                         android:textSize="24sp"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         app:fontFamily="sans-serif-condensed" />
 
                 </RelativeLayout>

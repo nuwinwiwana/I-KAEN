@@ -24,7 +24,8 @@
             app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toEndOf="@+id/imageView15"
             app:srcCompat="@drawable/email"
-            tools:layout_editor_absoluteY="655dp" />
+            tools:layout_editor_absoluteY="655dp"/>
+
 
         <ImageView
             android:id="@+id/imageView11"

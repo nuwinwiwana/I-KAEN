@@ -39,7 +39,7 @@ public class adminSetting extends AppCompatActivity {
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(adminSetting.this,AdminCamera.class));
+                startActivity(new Intent(adminSetting.this,Aboutus.class));
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {

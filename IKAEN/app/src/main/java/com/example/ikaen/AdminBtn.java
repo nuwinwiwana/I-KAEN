@@ -59,9 +59,13 @@ public class AdminBtn extends AppCompatActivity {
 
                 firebaseDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference storageReference = firebaseDatabase.getReference("Device");
+                DatabaseReference ActivityHistory = firebaseDatabase.getReference("ActivityHis");
 
                 FeedbackDetails feedbackDetails = new FeedbackDetails(1);
                 storageReference.setValue(feedbackDetails);
+
+                FeedbackDetails feedbackDetails1 = new FeedbackDetails(1);
+                ActivityHistory.setValue(feedbackDetails1);
 
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminBtn.this, "Notification");
                 builder.setContentTitle("Device Notification");
@@ -75,6 +79,8 @@ public class AdminBtn extends AppCompatActivity {
                 Toast.makeText(AdminBtn.this, "device activating", Toast.LENGTH_SHORT).show();
 
 
+
+
             }
 
         });
@@ -86,9 +92,13 @@ public class AdminBtn extends AppCompatActivity {
 
                 firebaseDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference storageReference = firebaseDatabase.getReference("Device");
+                DatabaseReference ActivityHistory = firebaseDatabase.getReference("ActivityHis");
 
                 FeedbackDetails feedbackDetails = new FeedbackDetails(0);
                 storageReference.setValue(feedbackDetails);
+
+                FeedbackDetails feedbackDetails1 = new FeedbackDetails(0);
+                ActivityHistory.setValue(feedbackDetails1);
 
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(AdminBtn.this, "Notification");
                 builder.setContentTitle("Device Notification");
@@ -105,4 +115,6 @@ public class AdminBtn extends AppCompatActivity {
         });
 
     }
+
+
 }

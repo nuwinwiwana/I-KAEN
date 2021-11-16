@@ -50,7 +50,7 @@ public class setting extends AppCompatActivity {
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(setting.this,camera.class));
+                startActivity(new Intent(setting.this,Aboutus.class));
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {
