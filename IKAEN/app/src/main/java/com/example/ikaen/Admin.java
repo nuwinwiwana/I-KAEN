@@ -172,7 +172,7 @@ public class Admin extends AppCompatActivity {
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Admin.this, AdminCamera.class));
+                startActivity(new Intent(Admin.this, AdminUserList.class));
             }
         });
         more.setOnClickListener(new View.OnClickListener() {

@@ -340,7 +340,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:textColor="#013a67"
-                            android:text="Camera"
+                            android:text="About Us"
                             android:textSize="24sp"
                             app:fontFamily="sans-serif-condensed" />
                         <ImageView
@@ -349,7 +349,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="15dp"
-                            app:srcCompat="@drawable/camera__2_" />
+                            app:srcCompat="@drawable/teamwork" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>

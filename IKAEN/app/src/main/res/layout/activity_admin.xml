@@ -337,7 +337,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
                     android:textColor="@color/white"
-                    android:text="Camera"
+                    android:text="User List"
                     android:textSize="24sp"
                     app:fontFamily="sans-serif-condensed" />
                 <ImageView
@@ -346,7 +346,8 @@
                     android:layout_height="75dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
-                    app:srcCompat="@drawable/camera" />
+                    app:srcCompat="@drawable/user__1___1_"
+                    />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ClientFeedback.class));
+                startActivity(new Intent(MainActivity.this, Aboutus.class));
             }
         });
         more.setOnClickListener(new View.OnClickListener() {

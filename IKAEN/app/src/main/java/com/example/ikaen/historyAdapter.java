@@ -33,11 +33,11 @@ public class historyAdapter extends FirebaseRecyclerAdapter<history,historyAdapt
         // "person.class")to appropriate view in Card
         // view (here "person.xml")
 
-        if (model.getActivity() == "1"){
-            holder.activity.setText("The device is moving");
+        if (model.getActivity().equals("1")){
+            holder.activity.setText("The device is in use");
         }
         else{
-            holder.activity.setText("The device is in idle state");
+            holder.activity.setText("The device is not in use");
         }
 
 

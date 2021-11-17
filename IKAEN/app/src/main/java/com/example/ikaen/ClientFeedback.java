@@ -22,9 +22,9 @@ public class ClientFeedback extends AppCompatActivity {
         SendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_SEND);
+                Intent i =new Intent(Intent.ACTION_SEND);
                 i.setType("message/html");
-                i.putExtra(Intent.EXTRA_EMAIL,new String( "mharithzaeef@gmail.com"));
+                i.putExtra(Intent.EXTRA_EMAIL, new String( "ikaenapp@gmail.com"));
                 i.putExtra(Intent.EXTRA_SUBJECT,"Feedback from App");
                 i.putExtra(Intent.EXTRA_TEXT,"Name :"+editTextName.getText()+"\n Message:"+editTextFeedback.getText());
                 try {
