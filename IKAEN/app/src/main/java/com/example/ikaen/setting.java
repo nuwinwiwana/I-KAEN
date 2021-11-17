@@ -23,12 +23,20 @@ public class setting extends AppCompatActivity {
         final CardView c2 = findViewById(R.id.settingCard2);
         final CardView c3 = findViewById(R.id.settingCard3);
         final CardView c4 = findViewById(R.id.settingCard4);
+        final CardView c5 = findViewById(R.id.settingCard5);
         final CardView logout = findViewById(R.id.logout);
 
         textView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(setting.this,ProfilePage.class));
+            }
+        });
+
+        c5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(setting.this,ClientFeedback.class));
             }
         });
 
@@ -42,7 +50,7 @@ public class setting extends AppCompatActivity {
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(setting.this,camera.class));
+                startActivity(new Intent(setting.this,Aboutus.class));
             }
         });
         c4.setOnClickListener(new View.OnClickListener() {
