@@ -3,6 +3,7 @@ package com.example.ikaen;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,13 +23,16 @@ public class ClientFeedback extends AppCompatActivity {
         SendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(Intent.ACTION_SEND);
-                i.setType("message/html");
-                i.putExtra(Intent.EXTRA_EMAIL, new String( "ikaenapp@gmail.com"));
-                i.putExtra(Intent.EXTRA_SUBJECT,"Feedback from App");
-                i.putExtra(Intent.EXTRA_TEXT,"Name :"+editTextName.getText()+"\n Message:"+editTextFeedback.getText());
+
+                Intent intent = new Intent (Intent.ACTION_SEND);
+                intent.setType("message/rfc822");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"ikaenapp@gmail.com"});
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Feedback from App");
+                intent.putExtra(Intent.EXTRA_TEXT,"Name :"+editTextName.getText()+"\n Message:"+editTextFeedback.getText());
+                intent.setPackage("com.google.android.gm");
+
                 try {
-                    startActivity(Intent.createChooser(i,"Please Select Email"));
+                    startActivity(Intent.createChooser(intent, null));
 
 
                 }
