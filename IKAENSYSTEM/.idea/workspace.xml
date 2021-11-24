@@ -27,7 +27,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd0c2642-8f9f-4536-8fe7-585653a4a0d3" name="Default Changelist" comment="" />
+    <list default="true" id="fd0c2642-8f9f-4536-8fe7-585653a4a0d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,10 +75,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../IKAEN" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -87,9 +91,7 @@
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method v="2" />
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="I-KAEN_SYSTEM.app" />
@@ -144,9 +146,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-      </method>
+      <method v="2" />
     </configuration>
   </component>
   <component name="SvnConfiguration">
@@ -195,9 +195,10 @@
       <screen x="0" y="0" width="1462" height="864" />
     </state>
     <state x="312" y="187" key="AndroidCreateResourceFileDialog/0.0.1462.864@0.0.1462.864" timestamp="1630592857958" />
-    <state x="512" y="187" key="FileChooserDialogImpl" timestamp="1630851612060">
-      <screen x="0" y="0" width="1462" height="864" />
+    <state x="448" y="147" key="FileChooserDialogImpl" timestamp="1637443716320">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="448" y="147" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1637443716320" />
     <state x="512" y="187" key="FileChooserDialogImpl/0.0.1462.864@0.0.1462.864" timestamp="1630851612060" />
     <state width="1417" height="181" key="GridCell.Tab.0.bottom" timestamp="1630764658926">
       <screen x="0" y="0" width="1462" height="864" />
