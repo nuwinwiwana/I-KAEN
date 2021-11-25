@@ -1,0 +1,143 @@
+{
+  "ActivityHis" : {
+    "value" : 0
+  },
+  "ActivityHistory" : {
+    "-MofteZQeyKaUElM2f0a" : {
+      "activity" : "1",
+      "timestamp" : "1637119076568"
+    },
+    "-Mofx7ehwV4eo3Xx3DbP" : {
+      "activity" : "1",
+      "timestamp" : "1637119986260"
+    },
+    "-Mofxg3SEn5Oyth_xaWu" : {
+      "activity" : "1",
+      "timestamp" : "1637120131291"
+    },
+    "-Mog-LJ26kNFbL5nG1tU" : {
+      "activity" : "0",
+      "timestamp" : "1637120828611"
+    },
+    "-Mog0mZgGeYAwBO8kxLl" : {
+      "activity" : "1",
+      "timestamp" : "1637121206508"
+    },
+    "-Mog2HfZswko5U97bvlR" : {
+      "activity" : "1",
+      "timestamp" : "1637121600164"
+    },
+    "-MogG0_mqh7jtSbZXw2-" : {
+      "activity" : "1",
+      "timestamp" : "1637125200162"
+    },
+    "-MogTkU5ZoKyDeeBB1Ej" : {
+      "activity" : "1",
+      "timestamp" : "1637128800136"
+    },
+    "-MoggUNrR8TIjcRZ_sqD" : {
+      "activity" : "1",
+      "timestamp" : "1637132400129"
+    },
+    "-MoguDIKbPoOZa-i7bCg" : {
+      "activity" : "1",
+      "timestamp" : "1637136000150"
+    },
+    "-MohysotRHCYEJjC4p40" : {
+      "activity" : "0",
+      "timestamp" : "1637154000130"
+    },
+    "-MoiBbjgQkxf4lXXcIXY" : {
+      "activity" : "0",
+      "timestamp" : "1637157600171"
+    },
+    "-MojGsSD5DI0yjIg6fYG" : {
+      "activity" : "0",
+      "timestamp" : "1637175756541"
+    },
+    "-MojU0AOOxlY9MVfk-ff" : {
+      "activity" : "0",
+      "timestamp" : "1637179200148"
+    },
+    "-Mojgk4TaFLMSxLUlFno" : {
+      "activity" : "1",
+      "timestamp" : "1637182800163"
+    },
+    "-MojuTywybVamizwbpUj" : {
+      "activity" : "0",
+      "timestamp" : "1637186400129"
+    },
+    "-MolcLDt0T7Lv44pNsWT" : {
+      "activity" : "0",
+      "timestamp" : "1637215200126"
+    },
+    "-Molq47qf2BeJRnux1VR" : {
+      "activity" : "0",
+      "timestamp" : "1637218800127"
+    }
+  },
+  "Device" : {
+    "value" : 1
+  },
+  "Humidity" : {
+    "humidity" : 54.7
+  },
+  "Pressure" : {
+    "Hpa" : 1002.24
+  },
+  "Tempature" : {
+    "celcius" : 27.65
+  },
+  "admin" : {
+    "6u6Tq1pnrHWELTQBFCPLGl1c7cG3" : {
+      "email" : "nurinmiku@gmail.com",
+      "fullname" : "nurin liyana",
+      "password" : "abcd1234",
+      "phone" : "0193352301"
+    },
+    "Pqn1On0seBgyluiBBZdOd5kD4zD3" : {
+      "email" : "husnaboxer27@gmail.com",
+      "fullname" : "Husna Radzuan",
+      "password" : "husnaradzuan27",
+      "phone" : "0127872110"
+    },
+    "cmdSAh1yqUScJIrO1RbZ1bisWDF2" : {
+      "email" : "cutecats6767@gmail.com",
+      "fullname" : "jason ",
+      "password" : "haziq11",
+      "phone" : "019 445567"
+    },
+    "z17hIlCh8IPovyrnoLhxUa6r85h1" : {
+      "email" : "mharithzaeef@gmail.com",
+      "fullname" : "harith",
+      "password" : "abc123",
+      "phone" : "01234567"
+    }
+  },
+  "users" : {
+    "7XN7TLE1eXbQK3GGoEjdQhkJjQK2" : {
+      "email" : "sahrularsad@gmail.com",
+      "fullname" : "YewonKim",
+      "password" : "sahrul01",
+      "phone" : "999"
+    },
+    "UTBdbEwVOfWpQcxWftjU9RiUBpR2" : {
+      "email" : "husnradzuan01@gmail.com",
+      "fullname" : "Husna Radzuan",
+      "password" : "husnaradzuan27",
+      "phone" : "0127872110"
+    },
+    "dQvEGr9V2pTzM1juwLm1aClAq732" : {
+      "email" : "hamidahtalib7072@gmail.com",
+      "fullname" : "Husna",
+      "password" : "husnaradzuan27",
+      "phone" : "0127872110"
+    },
+    "r8luiq7XhQM6ul7ThMrJbGJ72hJ3" : {
+      "email" : "nurinliyana23@gmail.com",
+      "fullname" : "naomi",
+      "password" : "1234abcd",
+      "phone" : "11111"
+    }
+  }
+}

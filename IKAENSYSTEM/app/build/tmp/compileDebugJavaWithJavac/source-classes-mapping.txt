@@ -1,4 +1,0 @@
-com/example/i_kaensystem/MainActivity.java
- com.example.i_kaensystem.MainActivity
-com/example/i_kaensystem/BuildConfig.java
- com.example.i_kaensystem.BuildConfig
